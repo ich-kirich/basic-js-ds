@@ -25,11 +25,11 @@ class Stack {
   }
 
   pop() {
-    var deletedData; 
+    var deleted; 
     delete this.size[this.size];
     this.size--;
-    deletedData = this.storage[this.size];
-    return deletedData;
+    deleted = this.storage[this.size];
+    return deleted;
   }
 
   peek() {
