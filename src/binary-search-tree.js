@@ -117,19 +117,19 @@ class BinarySearchTree {
           removeNode = node.left;
           return removeNode;
       }
-      var temp = this.MinNode(removeNode.right);
+      var temp = this.minNode(removeNode.right);
       removeNode.data = temp.data;
       removeNode.right = this.removeNode(removeNode.right, temp.data);
       return removeNode;
     }
   };
 
-  MinNode(node)
+  minNode(node)
   {
     if(node.left === null)
       return node;
     else
-      return this.MinNode(node.left);
+      return this.minNode(node.left);
   };
 
   min() {
