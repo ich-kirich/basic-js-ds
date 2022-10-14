@@ -115,14 +115,14 @@ class BinarySearchTree {
       else if(removeNode.right === null)
       {
           removeNode = node.left;
-          return node;
+          return removeNode;
       }
       var temp = this.MinNode(removeNode.right);
       removeNode.data = temp.data;
       removeNode.right = this.removeNode(removeNode.right, temp.data);
       return removeNode;
     }
-  }
+  };
 
   MinNode(node)
   {
@@ -130,7 +130,7 @@ class BinarySearchTree {
       return node;
     else
       return this.MinNode(node.left);
-  }
+  };
 
   min() {
     node = this.rootNode
